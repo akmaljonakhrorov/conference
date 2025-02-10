@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xalqaro Ilmiy Konferensiya - Farg'ona DTU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white p-5">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold">Xalqaro Ilmiy Konferensiya</h1>
+        <ul class="flex space-x-6">
+          <li><a href="#about" class="hover:text-gray-300">Haqida</a></li>
+          <li><a href="#schedule" class="hover:text-gray-300">Dastur</a></li>
+          <li>
+            <a href="#speakers" class="hover:text-gray-300">Ma’ruzachilar</a>
+          </li>
+          <li><a href="#contact" class="hover:text-gray-300">Aloqa</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-blue-700 text-white text-center py-20">
+      <h2 class="text-4xl font-bold">Farg‘ona Davlat Texnika Universiteti</h2>
+      <p class="text-lg mt-2">Mexanika Muhandisligi Fakulteti</p>
+      <p class="mt-4 text-lg">Xalqaro Ilmiy Konferensiya</p>
+      <p class="mt-2">2025-yil, 15-17 may | Farg‘ona, O‘zbekiston</p>
+      <a
+        href="#register"
+        class="mt-6 inline-block bg-white text-blue-900 px-6 py-2 rounded font-bold"
+        >Ro‘yxatdan o‘tish</a
+      >
+    </header>
+    <!-- ro'yxatdan otish -->
+    <div
+      id="registerModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Ro‘yxatdan o‘tish</h2>
+        <form id="registerForm">
+          <label class="block text-gray-700">Ism:</label>
+          <input
+            type="text"
+            id="name"
+            class="w-full border p-2 rounded mb-3"
+            required
+          />
+
+          <label class="block text-gray-700">Familiya:</label>
+          <input
+            type="text"
+            id="surname"
+            class="w-full border p-2 rounded mb-3"
+            required
+          />
+
+          <label class="block text-gray-700">Email:</label>
+          <input
+            type="email"
+            id="email"
+            class="w-full border p-2 rounded mb-3"
+            required
+          />
+
+          <label class="block text-gray-700">Universitet:</label>
+          <input
+            type="text"
+            id="university"
+            class="w-full border p-2 rounded mb-3"
+            required
+          />
+
+          <label class="block text-gray-700">Maqola mavzusi:</label>
+          <input
+            type="text"
+            id="topic"
+            class="w-full border p-2 rounded mb-3"
+            required
+          />
+
+          <button
+            type="submit"
+            class="w-full bg-blue-900 text-white py-2 rounded font-bold mt-4"
+          >
+            Yuborish
+          </button>
+        </form>
+        <button onclick="closeModal()" class="text-red-600 mt-3 block mx-auto">
+          Bekor qilish
+        </button>
+      </div>
+    </div>
+    <!-- ro'yxatdan otish -->
+    <!-- Konferensiya Haqida -->
+    <section id="about" class="container mx-auto py-20 px-6">
+      <h2 class="text-3xl font-bold text-center text-blue-900">
+        Konferensiya Haqida
+      </h2>
+      <p class="text-gray-700 text-center mt-4 max-w-2xl mx-auto">
+        Ushbu konferensiya mexanika muhandisligi sohasidagi so‘nggi ilmiy
+        tadqiqotlar, innovatsiyalar va texnologiyalarni muhokama qilish uchun
+        tashkil etilgan.
+      </p>
+    </section>
+
+    <!-- Dastur -->
+    <section id="schedule" class="bg-gray-200 py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-blue-900">
+          Konferensiya Dasturi
+        </h2>
+        <div class="mt-10 space-y-6">
+          <div class="bg-white shadow p-6 rounded">
+            <h3 class="text-xl font-bold">15-may, 2025 - Ochilish Marosimi</h3>
+            <p class="text-gray-700">10:00 - 12:00</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded">
+            <h3 class="text-xl font-bold">16-may, 2025 - Ilmiy Ma’ruzalar</h3>
+            <p class="text-gray-700">09:00 - 17:00</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded">
+            <h3 class="text-xl font-bold">17-may, 2025 - Panel Muhokamalar</h3>
+            <p class="text-gray-700">10:00 - 16:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ma’ruzachilar -->
+    <section id="speakers" class="container mx-auto py-20 px-6">
+      <h2 class="text-3xl font-bold text-center text-blue-900">
+        Ma’ruzachilar
+      </h2>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white shadow p-6 rounded text-center">
+          <img
+            src="https://placehold.co/150"
+            alt="Professor O‘zbekiston"
+            class="mx-auto rounded-full"
+          />
+          <h3 class="text-xl font-bold mt-4">Prof. Ismoil Karimov</h3>
+          <p class="text-gray-700">O‘zbekiston Milliy Universiteti</p>
+        </div>
+        <div class="bg-white shadow p-6 rounded text-center">
+          <img
+            src="https://placehold.co/150"
+            alt="Professor AQSh"
+            class="mx-auto rounded-full"
+          />
+          <h3 class="text-xl font-bold mt-4">Dr. John Smith</h3>
+          <p class="text-gray-700">MIT, AQSh</p>
+        </div>
+        <div class="bg-white shadow p-6 rounded text-center">
+          <img
+            src="https://placehold.co/150"
+            alt="Professor Germaniya"
+            class="mx-auto rounded-full"
+          />
+          <h3 class="text-xl font-bold mt-4">Dr. Anna Müller</h3>
+          <p class="text-gray-700">TU Berlin, Germaniya</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aloqa -->
+    <section id="contact" class="bg-blue-900 text-white py-20">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold">Bog‘lanish</h2>
+        <p class="mt-4">
+          Farg‘ona Davlat Texnika Universiteti, Mexanika Muhandisligi Fakulteti
+        </p>
+        <p class="mt-2">
+          Email: info@fergana-mech.uz | Telefon: +998 90 123 45 67
+        </p>
+        <div class="mt-6">
+          <a href="#" class="text-white text-2xl mx-2"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="text-white text-2xl mx-2"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="text-white text-2xl mx-2"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-gray-800 text-white">
+      <p>&copy; 2025 Farg‘ona DTU. Barcha huquqlar himoyalangan.</p>
+    </footer>
+  </body>
+</html>
